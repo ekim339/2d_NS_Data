@@ -1,0 +1,8 @@
+*.md
+__pycache__/
+*.pyc
+*.h5
+dns_dataset.h5
+trained_models/
+.ipynb_checkpoints/
+PIDM/trained_models/
