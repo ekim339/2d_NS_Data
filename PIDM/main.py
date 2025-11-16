@@ -46,8 +46,8 @@ self_condition = False
 
 # evaluation params
 test_eval_freq = 500
-sample_freq = 20000
-full_sample_freq = 100000
+sample_freq = 2000
+full_sample_freq = 10000
 ema_start = 1000
 ema = EMA(0.99)
 topopt_eval = True # evaluate topopt metrics (only for mechanics as governing equations)
@@ -55,7 +55,7 @@ use_double = False
 no_samples = 8
 save_output = True
 eval_residuals = True
-create_gif = False
+create_gif = True  # Enable GIF generation of denoising process
 
 # training parameters and datasets
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -72,7 +72,7 @@ pixels_per_dim = 64
 return_optimizer = False
 return_inequality = False
 train_batch_size = 32
-train_iterations = 100000  # Total training iterations
+train_iterations = 10000  # Total training iterations
 if name == 'local_test':
     no_samples = 1
     train_batch_size = 8
