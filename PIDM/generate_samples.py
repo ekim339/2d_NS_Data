@@ -19,7 +19,7 @@ from src.data_utils import generalized_b_xy_c_to_image
 # ============================================================================
 
 checkpoint_name = 'run_1'         
-checkpoint_step = 2000              
+checkpoint_step = 0                 # 0 = untrained model (before training)
 num_samples = 8                     
 create_gifs = True                 
 output_dir = f'generated_samples_step_{checkpoint_step}' 
@@ -37,7 +37,7 @@ print("Sample Generation from Trained Checkpoint")
 print("=" * 60)
 
 if not os.path.exists(checkpoint_path):
-    print(f"❌ ERROR: Checkpoint not found: {checkpoint_path}")
+    print(f"ERROR: Checkpoint not found: {checkpoint_path}")
     print(f"Available checkpoints in {load_path}/model/:")
     if os.path.exists(f'{load_path}/model/'):
         for f in os.listdir(f'{load_path}/model/'):

@@ -136,6 +136,10 @@ log_freq = 20
 output_save_dir = f'./trained_models/{name}'
 os.makedirs(output_save_dir, exist_ok=True)
 
+# Save initial checkpoint at step 0 (before training)
+save_model(config, model, 0, output_save_dir)
+print("Saved initial checkpoint at step 0")
+
 pbar = tqdm(range(train_iterations+1))
 for iteration in pbar:
     model.train()
