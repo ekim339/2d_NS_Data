@@ -1,4 +1,5 @@
 *.md
+!README.md
 __pycache__/
 *.pyc
 *.h5
@@ -6,3 +7,11 @@ dns_dataset.h5
 trained_models/
 .ipynb_checkpoints/
 PIDM/trained_models/
+test_setup.py
+generated_samples_step_0/
+generated_samples_step_2000/
+generated_samples_step_4000/
+generated_samples_step_6000/
+generated_samples_step_8000/
+generated_samples_step_10000/
+evaluation_results/
